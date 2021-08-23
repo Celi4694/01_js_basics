@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button>Klik og se tiden i konsollen</button>
+
+    <script>
+      document.querySelector("button").addEventListener("click", buttonClicked);
+      function buttonClicked() {
+        let time = new Date().getHours();
+
+        if (time > 5 && time < 10) {
+          time = "godmorgen";
+        } else if (time > 10 && time < 18) {
+          time = "goddag";
+        } else if (time > 18 && time < 24) {
+          time = "godaften";
+        } else {
+          time = "godnat";
+        }
+        console.log(time);
+      }
+    </script>
+  </body>
+</html>
